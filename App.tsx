@@ -1,18 +1,20 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {View} from 'react-native';
 import {HeaderLayout} from './src/layouts';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
+import {Home} from './src/components';
+import {AuthGuard} from './src/hoc';
 
 function App() {
   return (
     <SafeAreaProvider>
-      <View className="">
-        <HeaderLayout>
-          <Text className="text-3xl border-2 border-red-600 text-red-800">
-            홈 페이지
-          </Text>
-        </HeaderLayout>
-      </View>
+      <AuthGuard>
+        <View className="">
+          <HeaderLayout>
+            <Home />
+          </HeaderLayout>
+        </View>
+      </AuthGuard>
     </SafeAreaProvider>
   );
 }
