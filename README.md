@@ -2,6 +2,10 @@
 
 이 프로젝트는 React Native를 기반으로 하며, TypeScript와 Tailwind CSS (NativeWind)가 적용되어 있습니다.
 
+## 기본 화면
+
+https://github.com/user-attachments/assets/624028b1-7217-46e4-8f74-c80399216c1e
+
 ## 설치
 
 1. 의존성을 설치합니다:
