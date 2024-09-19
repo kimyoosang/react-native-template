@@ -4,7 +4,11 @@
 
 ## 기본 화면
 
-https://github.com/user-attachments/assets/624028b1-7217-46e4-8f74-c80399216c1e
+1. zustand를 이용한 authStore
+2. Header에서 로그인, 로그아웃 기능
+3. AuthGuard에서 로그인 상태 체크
+
+https://github.com/user-attachments/assets/e14f3109-f593-45d9-8458-7fefa30fd01a
 
 ## 설치
 
