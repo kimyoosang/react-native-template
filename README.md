@@ -1,79 +1,47 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# React Native 프로젝트 (TypeScript + Tailwind CSS)
 
-# Getting Started
+이 프로젝트는 React Native를 기반으로 하며, TypeScript와 Tailwind CSS (NativeWind)가 적용되어 있습니다.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## 설치
 
-## Step 1: Start the Metro Server
+1. 의존성을 설치합니다:
+   ```
+   yarn install
+   ```
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+2. iOS 개발을 위해 CocoaPods 의존성을 설치합니다 (Mac 전용):
+   ```
+   cd ios && pod install && cd ..
+   ```
 
-To start Metro, run the following command from the _root_ of your React Native project:
+## 실행 방법
 
-```bash
-# using npm
-npm start
+### 개발 서버 시작
 
-# OR using Yarn
-yarn start
+메트로 서버를 시작합니다:
+ ```
+npx react-native start
+ ```
+
+### iOS에서 실행 (Mac 전용)
+ ```
+yarn run ios
+ ```
+### Android에서 실행
+
+Android 에뮬레이터를 실행하거나 기기를 연결한 후, 새 터미널 창에서:
+ ```
+yarn run android
 ```
 
-## Step 2: Start your Application
+## 개발
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+- TypeScript: `.ts` 또는 `.tsx` 확장자를 사용하여 TypeScript 코드를 작성합니다.
+- Tailwind CSS: NativeWind를 통해 Tailwind CSS 클래스를 사용할 수 있습니다.
 
-### For Android
+## 문제 해결
 
-```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
-```
-
-### For iOS
-
-```bash
-# using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
-
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
-
-## Step 3: Modifying your App
-
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+빌드 오류 발생 시 다음을 시도해 보세요:
+1. 메트로 캐시 정리: `npx react-native start --reset-cache`
+2. 의존성 재설치: `rm -rf node_modules && yarn install`
+3. iOS의 경우: `cd ios && pod install && cd ..`
