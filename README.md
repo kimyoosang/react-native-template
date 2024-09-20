@@ -4,7 +4,7 @@
 
 ## 기본 화면
 
-1. zustand를 이용한 authStore
+1. zustand를 이용한 전역 상태 관리
 2. Header에서 로그인, 로그아웃 기능
 3. AuthGuard에서 로그인 상태 체크
 
